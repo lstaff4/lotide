@@ -7,17 +7,20 @@ const assertEquals = function(actual, expected) {
 };
 
 const eqArrays = function(arr1, arr2) {
-  let eqArrResult = true;
-  let arrsLength = 0;
+  console.log(arr1, arr2);
   if (arr1.length !== arr2.length) {
-    eqArrResult = false;
+    console.log('The lengths are not equal!');
+    return false;
   }
-  for (let i = 0; i < arrsLength; i++) {
+  for (let i = 0; i < arr1.length; i++) {
+    console.log('Is ' + arr1[i] + ' equal to ' + arr2[i] + '?');
     if (arr1[i] !== arr2[i]) {
-      eqArrResult = false;
+      console.log('We found a false!');
+      return false;
     }
   }
-  return eqArrResult;
-}
+  console.log('No issues, all are true!')
+  return true;
+};
 
 assertEquals(eqArrays([1, 2, 3], [1, 2, 3]), true); 
