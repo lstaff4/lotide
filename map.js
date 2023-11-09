@@ -1,5 +1,3 @@
-// const words = ["ground", "control", "to", "major", "tom"];
-
 const map = function(array, callback) {
   const results = [];
   for (let item of array) {
@@ -8,6 +6,3 @@ const map = function(array, callback) {
 }
 
 module.exports = map;
-
-// const results1 = map(words, word => word[0]);
-// console.log(results1);
